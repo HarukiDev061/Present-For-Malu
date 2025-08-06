@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Surpresa da Malu 🎈</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body class="login-page">
+  <div class="balloons-container">
+    <div class="balloon" style="--i:1;"></div>
+    <div class="balloon" style="--i:2;"></div>
+    <div class="balloon" style="--i:3;"></div>
+    <div class="balloon" style="--i:4;"></div>
+    <div class="balloon" style="--i:5;"></div>
+  </div>
+
+  <div class="container">
+    <h1>🎈 Bem-vinda, Malu 🎈</h1>
+    <p class="dica"><strong>Digite código mágico para entrar!</strong></p>
+    <p class="dica">💌 Dica: Palavra com 8 letras que TODO MUNDO fala no seu dia!</p>
+    <input type="password" id="senha" placeholder="Qual é o código mágico?" />
+    <button onclick="verificarSenha()">Entrar</button>
+    <p id="erro" class="erro"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

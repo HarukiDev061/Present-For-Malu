@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bilhete Premiado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #a475ff, #ff7ace);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #fcd34d, #fbbf24);
+      border: 5px double #fff;
+      color: #3f1d00;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.6);
+      position: relative;
+      animation: shine 5s infinite linear;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      z-index: 0;
+      border-radius: 25px;
+      animation: border-glow 3s infinite ease-in-out;
+    }
+
+    @keyframes shine {
+      0% {
+        box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.9);
+      }
+      100% {
+        box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.6);
+      }
+    }
+
+    @keyframes border-glow {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card .codigo {
+      font-size: 1.2rem;
+      background-color: #fff;
+      color: #3f1d00;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      font-weight: bold;
+      border: 2px dashed #3f1d00;
+    }
+
+    .card .msg {
+      font-size: 1rem;
+      color: #3f1d00;
+      margin-top: 10px;
+    }
+
+    .emoji {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">✅💰</div>
+    <h1>Acertou!</h1>
+    <div class="codigo">Código do prêmio: <br> <strong>#MALU50VIP</strong></div>
+    <div class="msg">Agora tira print e manda no grupo. 😉</div>
+  </div>
+</body>
+</html>
